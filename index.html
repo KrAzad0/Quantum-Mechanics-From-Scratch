@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interactive reconstruction of quantum mechanics through 41 foundational papers and milestones.">
+  <meta name="theme-color" content="#06111d">
+  <title>Quantum Mechanics From Scratch — Original Papers Atlas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#archive">Skip to papers</a>
+  <header>
+    <a class="brand" href="#top"><i aria-hidden="true"></i>QM<span>/</span>Scratch</a>
+    <nav><a href="#roadmap">Roadmap</a><a href="#archive">Papers</a><a href="#method">Method</a></nav>
+    <div class="head-actions"><button id="theme" type="button" aria-label="Switch theme">☼</button><a href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch">GitHub ↗</a></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img src="assets/quantum-hero.webp" alt="Abstract illustration connecting a thermal spectrum, an atomic wavefunction and entanglement correlations">
+      <div class="scrim"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Research archive <b>1900 → 1964</b></p>
+        <h1>Reconstruct quantum mechanics<br><em>from the original papers.</em></h1>
+        <p class="lede">Follow the ideas that turned energy quanta into operators, wavefunctions, probability amplitudes, spin and entanglement.</p>
+        <div class="hero-actions"><a href="#archive">Explore 41 landmarks ↓</a><button id="continue" type="button">Start the reading path →</button></div>
+      </div>
+      <div class="stats"><div><b>41</b><span>Landmarks</span></div><div><b>9</b><span>Conceptual eras</span></div><div><b>64</b><span>Years of revolution</span></div><div><b id="heroProgress">0%</b><span>Your progress</span></div></div>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+      <p class="section-no">01 / Roadmap</p>
+      <div class="intro-grid"><p class="kicker">The central idea</p><h2>Do not begin with a finished formalism. Watch it being invented.</h2><p>Each paper is a move in a long argument: a classical failure, a proposed structure, an experimental test, then a deeper question. Rebuild the mathematics as you go.</p></div>
+      <div class="chain">
+        <button type="button" data-era="Quantum hypothesis"><span>1900</span>Quanta</button>
+        <button type="button" data-era="Old quantum theory"><span>1913</span>Atoms</button>
+        <button type="button" data-era="Matter waves & statistics"><span>1924</span>Matter waves</button>
+        <button type="button" data-era="Matrix mechanics"><span>1925</span>Operators</button>
+        <button type="button" data-era="Wave mechanics"><span>1926</span>Wavefunctions</button>
+        <button type="button" data-era="Foundations & entanglement"><span>1935+</span>Entanglement</button>
+      </div>
+    </section>
+
+    <section class="archive" id="archive">
+      <p class="section-no">02 / Original papers</p>
+      <div class="archive-head"><div><p class="kicker">Foundational corpus</p><h2>The paper atlas</h2><p>This is the 41-entry corpus developed in our research discussion: a rigorous starting set, not a claim to include every paper ever written on quantum mechanics. Every abstract below is an original educational summary.</p></div><div class="progress"><span><b id="readCount">0</b> / 41 studied</span><i><b id="progressFill"></b></i></div></div>
+      <div class="tools">
+        <label><span>⌕</span><input id="search" type="search" placeholder="Search author, concept, equation…"><kbd>/</kbd></label>
+        <button id="essential" type="button" aria-pressed="false">★ Essential 20</button>
+        <button id="sort" type="button">Oldest first ↓</button>
+      </div>
+      <div class="era-filters" id="filters"></div>
+      <p class="results" id="results" aria-live="polite"></p>
+      <div class="paper-grid" id="paperGrid"></div>
+      <div class="empty" id="empty" hidden><b>ψ</b><h3>No paper matches that search.</h3><button id="reset" type="button">Reset archive</button></div>
+    </section>
+
+    <section class="method" id="method">
+      <p class="section-no">03 / Research method</p>
+      <div class="intro-grid"><p class="kicker">From reading to research</p><h2>Reproduce each conceptual leap.</h2><p>For each landmark, recover the problem it answered, rebuild the mathematics, and test one consequence computationally.</p></div>
+      <ol><li><span>01</span><h3>Recover the failure</h3><p>State what the classical model could not explain.</p></li><li><span>02</span><h3>Rebuild the derivation</h3><p>Translate the notation and expose every assumption.</p></li><li><span>03</span><h3>Compute one result</h3><p>Reproduce a spectrum, probability or inequality.</p></li><li><span>04</span><h3>Interrogate meaning</h3><p>Separate the result from its interpretation.</p></li></ol>
+      <aside><div class="spectrum" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><p class="kicker">First reconstruction</p><h3>Planck 1900: derive and plot the black-body spectrum.</h3><p>Compare Rayleigh–Jeans, Wien and Planck curves at several temperatures.</p></div><button type="button" data-paper="1">Open Paper 01 ↗</button></aside>
+    </section>
+  </main>
+
+  <footer><b>QM<span>/</span>Scratch</b><p>Curated for the “Quantum Mechanics From Scratch” research initiative by Kumar Azad.</p><p>Publisher links may require institutional access.</p><a href="#top">Back to top ↑</a></footer>
+
+  <dialog id="dialog"><button class="close" type="button" aria-label="Close">×</button><div id="dialogBody"></div></dialog>
+  <script src="papers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
