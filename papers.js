@@ -43,7 +43,7 @@ const rawPapers = [
 ];
 
 window.QM_PAPERS = rawPapers.map(line => {
-  const parts = line.slice(1).split("|");
+  const parts = line.split("|");
   const [id, year, authors, title, era, summary] = parts;
   const essential = parts.at(-1);
   const link = parts.at(-2);

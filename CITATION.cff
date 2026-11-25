@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these notes or examples, cite this repository and the commit you used."
+type: software
+title: Quantum Mechanics From Scratch
+authors:
+  - family-names: Azad
+    given-names: Kumar
+repository-code: "https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch"
+url: "https://krazad0.github.io/Quantum-Mechanics-From-Scratch/"
+abstract: >-
+  An introductory quantum-mechanics learning project combining original lecture
+  notes, a finite-difference square-well example with numerical verification,
+  and an interactive atlas of foundational papers.
+license: MIT
+keywords:
+  - quantum mechanics
+  - physics education
+  - finite differences
+  - reproducible computation

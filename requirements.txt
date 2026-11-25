@@ -1,0 +1,4 @@
+# Numerical teaching examples only; the browser atlas has no Python dependency.
+# This version is the verified reference environment for the first module.
+# NumPy 2.3.5 requires Python >=3.11.
+numpy==2.3.5

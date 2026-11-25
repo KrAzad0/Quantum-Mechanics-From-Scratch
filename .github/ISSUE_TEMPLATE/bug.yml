@@ -1,0 +1,25 @@
+name: Reproducible software bug
+description: Report an atlas or numerical-example failure with enough detail to reproduce it.
+title: "Bug: "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Commit, browser/OS, or Python/NumPy versions.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps or command to reproduce
+      description: Use synthetic data; remove credentials and personal information.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+      description: Include the relevant numerical values or error text.
+    validations:
+      required: true
