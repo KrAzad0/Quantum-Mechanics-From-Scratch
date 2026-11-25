@@ -1,0 +1,31 @@
+name: Build quantum problem-book PDF
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - docs/QUANTUM_PROBLEM_BOOK.md
+      - docs/CONTRIBUTING_PROBLEMS.md
+      - .github/workflows/problem-book-pdf.yml
+
+permissions:
+  contents: read
+
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install PDF toolchain
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      - name: Build educational PDF
+        run: |
+          pandoc docs/QUANTUM_PROBLEM_BOOK.md --standalone --pdf-engine=pdflatex -V geometry:margin=24mm -V fontsize=11pt -o quantum-problem-book.pdf
+          test -s quantum-problem-book.pdf
+      - name: Attach PDF
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quantum-problem-book
+          path: quantum-problem-book.pdf
