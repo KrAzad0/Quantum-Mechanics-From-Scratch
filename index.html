@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Interactive reconstruction of quantum mechanics through 41 foundational papers and milestones.">
+  <meta name="description" content="Learn quantum mechanics through original lecture notes, a verified square-well calculation, and an interactive atlas of 41 foundational papers.">
   <meta name="theme-color" content="#06111d">
   <title>Quantum Mechanics From Scratch — Original Papers Atlas</title>
   <link rel="stylesheet" href="styles.css">
@@ -12,7 +12,7 @@
   <a class="skip" href="#archive">Skip to papers</a>
   <header>
     <a class="brand" href="#top"><i aria-hidden="true"></i>QM<span>/</span>Scratch</a>
-    <nav><a href="#roadmap">Roadmap</a><a href="#archive">Papers</a><a href="#method">Method</a></nav>
+    <nav aria-label="Main navigation"><a href="#learn">Learn</a><a href="#roadmap">Roadmap</a><a href="#archive">Papers</a><a href="#method">Method</a></nav>
     <div class="head-actions"><button id="theme" type="button" aria-label="Switch theme">☼</button><a href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch">GitHub ↗</a></div>
   </header>
 
@@ -24,9 +24,21 @@
         <p class="eyebrow">Research archive <b>1900 → 1964</b></p>
         <h1>Reconstruct quantum mechanics<br><em>from the original papers.</em></h1>
         <p class="lede">Follow the ideas that turned energy quanta into operators, wavefunctions, probability amplitudes, spin and entanglement.</p>
-        <div class="hero-actions"><a href="#archive">Explore 41 landmarks ↓</a><button id="continue" type="button">Start the reading path →</button></div>
+        <div class="hero-actions"><a href="#learn">Start from the foundations ↓</a><button id="continue" type="button">Explore the paper atlas →</button></div>
       </div>
       <div class="stats"><div><b>41</b><span>Landmarks</span></div><div><b>9</b><span>Conceptual eras</span></div><div><b>64</b><span>Years of revolution</span></div><div><b id="heroProgress">0%</b><span>Your progress</span></div></div>
+    </section>
+
+    <section class="learning" id="learn" aria-labelledby="learnTitle">
+      <p class="section-no">Start here / Lecture notes and computation</p>
+      <div class="archive-head"><div><p class="kicker">Derive it. Calculate it. Check it.</p><h2 id="learnTitle">Build the foundations.</h2><p>Three original starter chapters connect mathematical tools to quantum predictions. Each includes worked examples and exercises. The first numerical lab checks a particle-in-a-box spectrum against its exact solution.</p></div></div>
+      <div class="learning-grid">
+        <a class="learning-card" href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch/blob/main/notes/01-mathematical-foundations.md"><span>Chapter 01</span><h3>Mathematical foundations</h3><p>Complex amplitudes, inner products, normalization and orthogonality.</p><b>Read the chapter ↗</b></a>
+        <a class="learning-card" href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch/blob/main/notes/02-postulates-and-two-level-systems.md"><span>Chapter 02</span><h3>States and measurement</h3><p>State vectors, observables, the Born rule and a worked two-level system.</p><b>Read the chapter ↗</b></a>
+        <a class="learning-card" href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch/blob/main/notes/03-infinite-square-well.md"><span>Chapter 03</span><h3>The infinite square well</h3><p>Boundary conditions, normalized eigenstates, quantized energies and a numerical check.</p><b>Read the chapter ↗</b></a>
+      </div>
+      <div class="learning-links"><a href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch/tree/main/examples">Run the Python lab ↗</a><a href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch/blob/main/CONTRIBUTING.md">Suggest a correction ↗</a><a href="https://github.com/KrAzad0/Quantum-Mechanics-From-Scratch/blob/main/ROADMAP.md">See what comes next ↗</a></div>
+      <p class="learning-status">This is an early learning project. Further chapters are planned; the complete quantum-mechanics curriculum is still in development.</p>
     </section>
 
     <section class="roadmap" id="roadmap">
@@ -44,9 +56,10 @@
 
     <section class="archive" id="archive">
       <p class="section-no">02 / Original papers</p>
-      <div class="archive-head"><div><p class="kicker">Foundational corpus</p><h2>The paper atlas</h2><p>This is the 41-entry corpus developed in our research discussion: a rigorous starting set, not a claim to include every paper ever written on quantum mechanics. Every abstract below is an original educational summary.</p></div><div class="progress"><span><b id="readCount">0</b> / 41 studied</span><i><b id="progressFill"></b></i></div></div>
+      <div class="archive-head"><div><p class="kicker">Foundational corpus</p><h2>The paper atlas</h2><p>Explore 41 selected papers and milestones, from Planck to Bell. Each overview is an original educational summary. Linked sources include original publications, archival records and translations; some require institutional access.</p></div><div class="progress"><span><b id="readCount">0</b> / 41 studied</span><i><b id="progressFill"></b></i></div></div>
+      <p class="storage-notice" id="storageNotice" role="status">Progress and theme are saved only in this browser. No account is required.</p>
       <div class="tools">
-        <label><span>⌕</span><input id="search" type="search" placeholder="Search author, concept, equation…"><kbd>/</kbd></label>
+        <label><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="Search papers by author, concept or equation" placeholder="Search author, concept, equation…"><kbd>/</kbd></label>
         <button id="essential" type="button" aria-pressed="false">★ Essential 20</button>
         <button id="sort" type="button">Oldest first ↓</button>
       </div>
@@ -68,6 +81,7 @@
 
   <dialog id="dialog"><button class="close" type="button" aria-label="Close">×</button><div id="dialogBody"></div></dialog>
   <script src="papers.js"></script>
+  <script src="storage.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

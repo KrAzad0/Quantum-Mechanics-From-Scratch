@@ -1,0 +1,23 @@
+name: Physics or source correction
+description: Report a derivation, equation, explanation, or citation that needs correction.
+title: "Correction: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: File, chapter, equation, or paper ID.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs correcting?
+      description: Explain the issue and the proposed correction, including assumptions or units.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting derivation or source
+      description: Link a primary source or show a short calculation. Do not upload copyrighted chapters.
